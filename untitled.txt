@@ -1,0 +1,18 @@
+### is there any other form of normalization other than softmax ?
+### use other model, excluding bigram model :
+N-gram Language Model: It predicts the probability of a word based on the previous N-1 words. It's simple but suffers from the sparsity problem as N increases.
+Feedforward Neural Network Language Model (NNLM): A neural network-based language model that learns distributed representations of words and predicts the next word in a sequence.
+
+Recurrent Neural Network Language Model (RNNLM): An extension of NNLM that uses recurrent connections to model sequential data. It has the ability to capture long-range dependencies but suffers from the vanishing gradient problem.
+
+Long Short-Term Memory (LSTM) Language Model: A type of RNN designed to overcome the vanishing gradient problem. It includes memory cells and gating mechanisms to better capture long-range dependencies.
+
+Gated Recurrent Unit (GRU) Language Model: Similar to LSTM, but with a simplified architecture. It has fewer parameters and computations compared to LSTM.
+Transformer-based Language Model: A model architecture that relies entirely on self-attention mechanisms and feedforward neural networks, without recurrent connections. It's highly parallelizable and has been shown to achieve state-of-the-art performance on various natural language processing tasks.
+
+BERT (Bidirectional Encoder Representations from Transformers): A transformer-based language model pre-trained on large corpora using masked language modeling and next sentence prediction objectives. It has revolutionized many NLP tasks through transfer learning.
+GPT (Generative Pre-trained Transformer): A series of transformer-based language models developed by OpenAI. It's trained using autoregressive language modeling and can generate coherent text based on a given prompt.
+
+ELECTRA (Efficiently Learning an Encoder that Classifies Token Replacements Accurately): A model that replaces masked language modeling with a more efficient method called "replaced token detection." It's designed to be computationally efficient while achieving strong performance.
+
+XLNet: A model that integrates ideas from autoregressive language modeling and permutation-based language modeling. It leverages the advantages of both approaches to capture bidirectional context while avoiding the limitations of traditional autoregressive models
