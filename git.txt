@@ -1,0 +1,73 @@
+####### WORKED #############################
+git initial
+git status
+## create master branch : git checkout -b master
+## git add .
+## git commit -m "xour commit message"
+## git push -u origin master
+#############################################
+to remove existing .git folder using powershell:
+Remove-Item -Path .git -Recurse -Force
+###########################################
+to remove existing .git folder using bash:
+rm -rf .git
+##################### Updated file ##########
+git status
+git add .
+git commit -m "mssg"
+git branch -M main
+git remote add origin repo_url
+----------- or if there are any master branch ---
+git push origin branch_name/master
+#############################################
+
+
+
+git init
+git add .
+git commit -m "Add new file: filename"
+git remote add origin https://github.com/monochandan/LLM.git
+git push -u origin master
+
+
+ERROR: 
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+solved:
+--------- no
+
+ ad particular file:
+ 
+ ## ERROR 1:
+
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/monochandan/LLM.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+## solution 1:
+
+git pull origin main
+git push origin main
+
+
+## ERROR 2: (marge conflict)
+
+  ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/monochandan/LLM.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+
+## Solution:
+
+git pull origin main --allow-unrelated-histories
+git push origin main --allow-unrelated-histories
+git push origin main
